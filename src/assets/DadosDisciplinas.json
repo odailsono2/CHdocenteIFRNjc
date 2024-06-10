@@ -1,0 +1,587 @@
+[
+    {
+        "periodo": "1",
+        "componente": "646 - Língua Portuguesa  (NFD)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Português",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "1",
+        "componente": "1773 - Princípios e Fenômenos da Mecânica(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Física",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "1",
+        "componente": "1775 - Seminário de Integração Acadêmica(4H)",
+        "tipo": "Seminário",
+        "optativo": "Não",
+        "chTeorica": "4",
+        "area": "Seminário",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "769 - Cálculo Diferencial e Integral (NFD)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Matemática",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "1780 - Energia e Meio Ambiente(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "1779 - Ética Profissional e Legislação Ambiental(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Direito",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "1569 - Filosofia, Ciência e Tecnologia",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Filosofia",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "1778 - Fluídos e Termodinâmica(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Física",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "1776 - Leitura e Produção de Textos Acadêmicos(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Português",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "835 - Metodologia Científica e Tecnológica (NCT)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Metodologia Cientíca",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "1777 - Princípios e Fenômenos Eletromagnéticos(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Física",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "2",
+        "componente": "1781 - Seminário de Iniciação à Pesquisa e à Extensão(30H)",
+        "tipo": "Seminário",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Seminário",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1784 - Álgebra Linear(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Matemática",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1782 - Cálculo de múltiplas variáveis(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Matemática",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1789 - Desenvolvimento de Projetos I(60H)",
+        "tipo": "Prática Profissional",
+        "optativo": "Não",
+        "chTeorica": "0",
+        "area": "Seminário",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1785 - Eletricidade e Circuitos Elétricos(90H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "90",
+        "area": "Eletroeletrônica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1787 - Fundamentos de Petróleo e Biocombustíveis(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Química-Petróleo",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1783 - Oscilações e Ondas(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Física",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1786 - Resistência dos Materiais(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Mecânica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1788 - Seminário de Orientação de Projeto Integrador I(30H)",
+        "tipo": "Seminário",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Seminário",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "3",
+        "componente": "1677 - Sociologia do Trabalho(30H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Sociologia",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1794 - Análise de Sistemas de Potência(75H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "75",
+        "area": "Eletrotécnica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1798 - Desenvolvimento de Projetos II(60H)",
+        "tipo": "Prática Profissional",
+        "optativo": "Não",
+        "chTeorica": "0",
+        "area": "PI",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1791 - Eletrônica Analógica(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletroeletrônica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1795 - Energia Solar Térmica(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1790 - Equações Diferenciais(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Matemática",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1796 - Informática Aplicada(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Informática",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1793 - Instalações Elétricas de Baixa Tensão(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletrotécnica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1792 - Máquinas Elétricas(75H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "75",
+        "area": "Eletrotécnica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "4",
+        "componente": "1797 - Seminário de Orientação de Projeto Integrador II(30H)",
+        "tipo": "Seminário",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Seminário",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1802 - Comandos Elétricos(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletrotécnica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1808 - Desenvolvimento de Projetos III(60H)",
+        "tipo": "Prática Profissional",
+        "optativo": "Não",
+        "chTeorica": "0",
+        "area": "PI",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1801 - Eletrônica de Potência(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletroeletrônica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1800 - Eletrônica Digital(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletroeletrônica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1806 - Energia Solar Fotovoltaica(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1804 - Fundamentos de Energia Eólica(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1805 - Fundamentos de Energia Hidráulica(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1803 - Instalações Elétricas de Alta Tensão I(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletrotécnica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1799 - Saúde e Segurança do Trabalho(30H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Segurança do Trabalho",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "5",
+        "componente": "1807 - Seminário de Orientação de Projeto Integrador III(30H)",
+        "tipo": "Seminário",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Seminário",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "6",
+        "componente": "1810 - Automação e Controle(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletroeletrônica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "6",
+        "componente": "1811 - Controladores Lógicos Programáveis (CLPs)(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletroeletrônica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "6",
+        "componente": "1809 - Gestão de Negócios(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Administração",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "6",
+        "componente": "1812 - Instalações Elétricas de Alta Tensão II(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Eletrotécnica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "6",
+        "componente": "1815 - Seminário de Orientação para a Prática Profissional de Estágio Supervisionado ou Trabalho dt Conclusão de Curso (TCC)(30H)",
+        "tipo": "Seminário",
+        "optativo": "Não",
+        "chTeorica": "30",
+        "area": "Seminário",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "6",
+        "componente": "1813 - Sistemas de Energia Eólica(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "6",
+        "componente": "1814 - Sistemas de Geração Hidrelétricos(60H)",
+        "tipo": "Regular",
+        "optativo": "Não",
+        "chTeorica": "60",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1820 - Direito e Cidadania(30H)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Direito",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "5893 - Direito Regulatório",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Direito",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1825 - Elementos de Máquinas",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Mecânica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "696 - Empreendedorismo (NCT)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Administração",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "6720 - Energia e Sociedade",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1817 - Estágio curricular supervisionado(180H)",
+        "tipo": "Prática Profissional",
+        "optativo": "Sim",
+        "chTeorica": "0",
+        "area": "Estágio",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1821 - Estatística Aplicada(60H)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "60",
+        "area": "Matemática",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1818 - Inglês Instrumental(60H)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "60",
+        "area": "Inglês",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1610 - LIBRAS",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Libras",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1608 - Língua Espanhola(30H)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Espanhol",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1819 - Primeiros Socorros(30H)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Segurança do Trabalho",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1826 - Projetos Elétricos e Mecânicos em CAD",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "60",
+        "area": "Mecânica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "877 - Psicologia das Relações do Trabalho (NFD)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Psicologia",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1611 - Qualidade de Vida e Trabalho",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Educação Física",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1822 - Sistemas Microcontrolados(30H)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Eletroeletrônica",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1816 - TCC(180H)",
+        "tipo": "Prática Profissional",
+        "optativo": "Sim",
+        "chTeorica": "0",
+        "area": "TCC",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1823 - Tecnologia de Aerogeradores(30H)",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    },
+    {
+        "periodo": "-",
+        "componente": "1824 - Tecnologia de Painéis Fotovoltaicos",
+        "tipo": "Regular",
+        "optativo": "Sim",
+        "chTeorica": "30",
+        "area": "Energias Renováveis",
+        "curso": "CST Energias Renovaveis"
+    }
+]

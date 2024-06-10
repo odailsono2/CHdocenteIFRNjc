@@ -1,0 +1,17 @@
+.table {
+    border: black;
+    border-radius: 20px;
+    height: min-content;
+    width: max-content;
+    align-content: flex-end;
+
+}
+
+.table th {
+    display: flexbox;
+    background-color: chocolate;
+}
+
+.table td {
+    background-color: antiquewhite;
+}

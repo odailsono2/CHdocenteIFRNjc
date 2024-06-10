@@ -1,0 +1,29 @@
+<table>
+  <thead>
+    <tr>
+      @for (key of getKeys(jsonData); track key){
+        @if (isObject(jsonData[key])){
+          <th>{{jsonData[key]}}</th>
+        }
+      }
+    </tr>
+  </thead>
+  <tbody>
+    <!-- @for (key of getKeys(jsonData); track key){
+      @if (!isObject(jsonData[key])){
+        <tr>
+        <td>{{ key }}</td>
+        <td>{{ jsonData[key] }}</td>
+        </tr>
+      }
+      @if (isObject(jsonData[key])){
+      <tr>
+        <td>{{ key }}</td>
+        <td>
+          <app-json-table [jsonData]="jsonData[key]"></app-json-table>
+        </td>
+      </tr>
+    } 
+    }-->
+  </tbody>
+</table>

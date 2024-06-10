@@ -1,0 +1,35 @@
+<!-- head da tabela com as chaves -->
+<table class="table">
+    <thead>
+        <tr>
+            @for(key of listKeys; track key; let i=$index){
+                <td #tdRef>
+                    <div>
+                        <span>{{key}}</span>
+                        <button (click)="aClickUP(key)">&uarr;</button>
+                        <button (click)="aClickDOWN(key)">&darr;</button>
+                    </div>
+                    @if(key !== 'id'){
+                        <div style="visibility: visible">
+                            <input type="search" placeholder="Digite par filtrar" (input)="filtrar(key,$event)">
+                        </div>
+                    }
+                </td>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <!-- incluir ordenador cresc/descr/deletar/incluir/editar celulas (use viewchild) -->
+        @for(obj of listaObjetos;track obj['id']){
+            <tr [id]="obj['id']">
+                @for (key of tableThings.getKeys(obj); track key) {
+                    <td [id]="key">{{obj[key]}}</td>
+                }
+            </tr>
+        }
+        @empty {
+            <tr>Tabela Vazia</tr>
+        }
+    </tbody>
+</table>
+
