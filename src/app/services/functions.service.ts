@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Item, buscaObjeto, filtrarMultiplasColunasTabela, sortByParameter } from "./ordenarobjetos";
+import { Item, buscaObjeto, filtrarMultiplasColunasTabela, incluirKeyAt, incluirKeyAtArray, sortByParameter } from "./ordenarobjetos";
 
 @Injectable({
     providedIn:'root'
@@ -18,19 +18,23 @@ export class TableThins{
         return 'repeat('+this.getKeys(obj).length+', 1fr)'
     }
 
-    appendIDJSON(listaObjetos:any):any{
-        let nova_lista:any[]=[]
-
-        listaObjetos.forEach((objeto:any,id:number) => {
-            const novo_objeto = {id,...objeto}
-             nova_lista.push(novo_objeto)
-        });
-        return nova_lista
-    }
+    incluirKeyAtArray = incluirKeyAtArray
+    
 
     ordenarAD = sortByParameter 
 
     buscarItem = buscaObjeto
 
     filtrarMultiplasColunasTabela = filtrarMultiplasColunasTabela
+
+    normalizeString(str:any) {
+        let straux:string
+        if(typeof(str)!=='string'){
+            straux = str.toString()
+        }
+        else{
+            straux = str
+        }
+        return straux.replace(/\s+/g, ' ').trim();
+      }
 }

@@ -1,0 +1,51 @@
+<div class="grid-container" [style]="{'grid-template-columns': getGridTemplateColumns()}">
+
+    @for(key of listKeys; track $index; let i=$index){
+
+        <div class="celula-header" [id]=i [contentEditable]="false">
+            
+            @if(key === 'id'){
+
+                <div>{{key}}</div>
+                <div>
+                <app-ordenar [key]="key" (ordemCrescente)="aClickUP(key)" (ordemDecrescente)="aClickDOWN(key)"></app-ordenar>
+            </div>
+            }
+
+            @else {
+
+                <span>{{key}}</span>
+
+                <app-filtro-lista [key]="key" (filtrar)="filtrar(key,$event,listaObjetosOriginal)"></app-filtro-lista>
+
+                <app-ordenar [key]="key" (ordemCrescente)="aClickUP(key)" (ordemDecrescente)="aClickDOWN(key)"></app-ordenar>
+
+            }
+        </div>
+    }
+
+    <!-- incluir ordenador cresc/descr/deletar/incluir/editar celulas (use viewchild) -->
+    @for(obj of listaObjetos;track $index; let i = $index; ){
+
+        @for (key of listKeys; track key; let k=$index;let numItemLinha=$count) {
+
+
+
+            <div class="celula-dados" [id]="i*numItemLinha+k" contenteditable="true" (blur)="onBlur($event,i,key,i*numItemLinha+k)"
+                (keydown)="onKeyDown($event,i*numItemLinha+k)" #editavelDiv>
+                {{obj[key]}}
+                <!-- <span>{{obj[key].length}}</span> -->
+            </div>
+            <!-- Mostrar o ID de cada celula -->
+               
+
+            
+
+        }
+
+    }
+    @empty {
+        <div>Tabela Vazia</div>
+    }
+
+</div>

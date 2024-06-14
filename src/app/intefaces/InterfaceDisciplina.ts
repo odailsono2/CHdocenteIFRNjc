@@ -41,7 +41,7 @@ export interface Disciplinas {
     chTeorica: number,
     area: string,
     curso: string
-    OnChangeObj: () => void
+
 }
 
 export const todasDisciplinas = JSON.parse(JSON.stringify(dadosTodasDisciplinas))

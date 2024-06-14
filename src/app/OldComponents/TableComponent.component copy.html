@@ -1,0 +1,64 @@
+<!-- head da tabela com as chaves -->
+<table class="table">
+    <thead>
+        <tr>
+            @for(key of listKeys; track $index; let i=$index){
+            <td>
+                <div [id]=i style="width: max-content;" [contentEditable]="false">
+
+                    @if(key === 'id'){
+
+                    <span>{{key}}</span>
+
+                    <app-ordenar [key]="key" (ordemCrescente)="aClickUP(key)"
+                        (ordemDecrescente)="aClickDOWN(key)"></app-ordenar>
+
+                    }
+
+                    @else {
+
+                    <span>{{key}}</span>
+
+                    <app-filtro-lista [key]="key" (filtrar)="filtrar(key,$event,listaObjetosOriginal)"></app-filtro-lista>
+
+                    <app-ordenar [key]="key" (ordemCrescente)="aClickUP(key)"
+                        (ordemDecrescente)="aClickDOWN(key)"></app-ordenar>
+
+                    }
+                </div>
+            </td>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <!-- incluir ordenador cresc/descr/deletar/incluir/editar celulas (use viewchild) -->
+        @for(obj of listaObjetos;track $index; let i = $index; ){
+
+
+
+        <tr [id]="i">
+<!-- //tableThings.getKeys(obj) -->
+            @for (key of tableThings.getKeys(obj); track key; let k=$index;let totObj=$count) {
+           
+                @if (!obj['visible']){
+           
+                    <td [id]="i*totObj+k">
+                        <div [id]="i*totObj+k" class="editavelDiv" contenteditable="true" (blur)="onBlur($event,i,key)" (keypress)="onInput($event,i*totObj+k)" #editavelDiv>
+                            {{obj[key]}}
+                        </div>
+                        <!-- Mostrar o ID de cada celula -->
+                        <!-- <div>{{i*totObj+k}}</div> -->
+                    </td>
+           
+                }
+
+            }
+
+        </tr>
+
+        }
+        @empty {
+        <tr>Tabela Vazia</tr>
+        }
+    </tbody>
+</table>
