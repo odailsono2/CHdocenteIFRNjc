@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Item, buscaObjeto, filtrarMultiplasColunasTabela, incluirKeyAt, incluirKeyAtArray, sortByParameter } from "./ordenarobjetos";
+import { Item, buscaObjeto, filtrarMultiplasColunasTabela, incluirKeyAt, incluirKeyAtArray, setParameterObjKey, sortByParameter } from "./tableFunctions";
 
 @Injectable({
     providedIn:'root'
@@ -26,6 +26,8 @@ export class TableThins{
     buscarItem = buscaObjeto
 
     filtrarMultiplasColunasTabela = filtrarMultiplasColunasTabela
+
+    setParameterObjKey = setParameterObjKey
 
     normalizeString(str:any) {
         let straux:string

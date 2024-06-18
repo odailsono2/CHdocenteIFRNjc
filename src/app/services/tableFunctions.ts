@@ -4,22 +4,39 @@ export interface Item {
 
 export interface ObjKey {
   name: string,
-  visible: boolean
+  visible?: string
+  clickable?: boolean
+  editable?: boolean
+  style?:string
+  freeze?:boolean
+  filter?:boolean
+  change?:boolean
+  set?:(parameter:string|boolean|number)=>void
 }
 
-export function setObjKey({ name }: { name: string }): ObjKey {
+export function setParameterObjKey<T, K extends keyof T>(obgkey:T, key:K, value: T[K]){
+  obgkey[key] = value
+}
+
+
+// implementar classe de keys com Set type
+export function includeObjKey({ name }: { name: string }): ObjKey {
+  
   let newKey: ObjKey = {} as ObjKey;
 
-  newKey.name = name
-  newKey.visible = true
+  newKey.name= name
+  newKey.visible = "visible"
+  newKey.editable = true
 
   return newKey
 }
 
 export function setListObjKeys({ listaKeysNames }: { listaKeysNames: string[] }): ObjKey[] {
+  
   const listaKeys: ObjKey[] = []
+
   listaKeysNames.forEach((name) => {
-    listaKeys.push(setObjKey({ name: name }))
+    listaKeys.push(includeObjKey({ name: name }))
   })
 
   return listaKeys
@@ -81,15 +98,15 @@ export function filtrarMultiplasColunasTabela({ items, key, palavra, mapKeysPala
 }
 
 interface novoMembroObjeto {
-  obj: Item,
+  objeto: Item,
   newkey: any,
   value?: any,
-  indice?: number
+  coluna?: number
   visible?: boolean
 }
-export function incluirKeyAt({ obj, newkey, value = undefined, indice = 0 }: novoMembroObjeto): Item {
-  const entries = Object.entries(obj)
-  entries.splice(indice, 0, [newkey, value])
+export function incluirKeyAt({ objeto, newkey, value = undefined, coluna = 0 }: novoMembroObjeto): Item {
+  const entries = Object.entries(objeto)
+  entries.splice(coluna, 0, [newkey, value])
   return Object.fromEntries(entries)
 }
 
@@ -97,17 +114,17 @@ interface novoMembroArrayObjetos {
   arrayObj: Item[],
   newkey: any,
   value?: any,
-  indice?: number
+  coluna?: number
 }
 
-export function incluirKeyAtArray({ arrayObj, newkey, value = undefined, indice = 0 }: novoMembroArrayObjetos): any {
+export function incluirKeyAtArray({ arrayObj, newkey, value = undefined, coluna = 0 }: novoMembroArrayObjetos): any {
   let nova_lista: any[] = []
 
-  if (value === undefined && indice === 0) {
+  if (newkey === 'id') {
 
     arrayObj.forEach((objeto: any, id: number) => {
       // console.log(nova_lista)
-      const novo_objeto = incluirKeyAt({ newkey: newkey, obj: objeto, indice: indice, value: id })//{id,...objeto}
+      const novo_objeto = incluirKeyAt({ newkey: newkey, objeto: objeto, coluna: coluna, value: id })//{id,...objeto}
       nova_lista.push(novo_objeto)
       // console.log(nova_lista)
 
@@ -118,7 +135,7 @@ export function incluirKeyAtArray({ arrayObj, newkey, value = undefined, indice 
 
 
   arrayObj.forEach((objeto: any) => {
-    const novo_objeto = incluirKeyAt({ newkey: newkey, obj: objeto, indice: indice, value: value })//{id,...objeto}
+    const novo_objeto = incluirKeyAt({ newkey: newkey, objeto: objeto, coluna: coluna, value: value })//{id,...objeto}
     nova_lista.push(novo_objeto)
   });
 

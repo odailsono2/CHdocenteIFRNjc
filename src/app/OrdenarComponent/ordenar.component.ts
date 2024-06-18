@@ -13,8 +13,16 @@ export class OrdenarComponent {
   ordemDecrescente = output()
   moveLeft = output()
   moveRight = output()
+  close = output()
   title = input<string>('None')
+  edite = output()
   key = input.required<string>()
+
+  editavel = true
+  editar(){
+    this.editavel = !this.editavel
+    this.edite.emit()
+  }
   
  
 }

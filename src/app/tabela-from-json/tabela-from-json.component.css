@@ -6,16 +6,13 @@
     outline: none; /* Remove outline when div is focused */
     transition: border-color 0.3s;
 }
-.editavelDiv:focus {
-    background-color: #c4daec;
-/* border-color: #66afe9;  Change border color when focused */ 
-}
+
 .grid-container{
     display: grid;
     border: 1px;
     border-color: black;
-    background-color: rgb(179, 211, 216);
 }
+
 .celula-header{
     display: ruby; 
     justify-content: center;
@@ -24,6 +21,8 @@
     border-color: black;
     color: rgb(5, 38, 70);
     font-size: x-large;
+    background-color: rgb(145, 200, 209);
+
     /* white-space: pre; */
     /* display: inline; */
 }
@@ -35,20 +34,19 @@
     color:rgb(10, 44, 73);
     transition: border-color 0.3s;
     align-items: center;
+    /* background-color: rgb(145, 200, 209); */
+
     /* white-space: pre; */
     /* display: inline; */
 }
 .celula-dados:hover{
-    background-color:rgb(83, 244, 223);
+    background-color:rgb(100, 141, 85);
 }
 
 .celula-dados:focus{
     background-color: #ffffff;
 }
 
-.celula-dados:not(:focus):hover{
+/* .celula-dados:not(:focus):hover{
     background-color:rgb(105, 235, 147);
-}
-.celula-dados:change{
-    background-color:rgb(242, 65, 65);
-}
+} */

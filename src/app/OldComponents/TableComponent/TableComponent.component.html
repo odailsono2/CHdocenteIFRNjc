@@ -2,14 +2,16 @@
 
     @for(key of listKeys; track $index; let i=$index){
 
-        <div class="celula-header" [id]=i [contentEditable]="false">
+        <div class="celula-header" [id]="i" [contentEditable]="false">
             
             @if(key === 'id'){
 
-                <div>{{key}}</div>
                 <div>
-                <app-ordenar [key]="key" (ordemCrescente)="aClickUP(key)" (ordemDecrescente)="aClickDOWN(key)"></app-ordenar>
-            </div>
+                    {{key}}
+                </div>
+                <div>
+                    <app-ordenar [key]="key" (ordemCrescente)="aClickUP(key)" (ordemDecrescente)="aClickDOWN(key)" (moveLeft)="moveLeft()" (moveRight)="moveRight()"></app-ordenar>
+                </div>
             }
 
             @else {
@@ -30,9 +32,9 @@
         @for (key of listKeys; track key; let k=$index;let numItemLinha=$count) {
 
 
-
+<!-- fazer visibilidade das colunas -->
             <div class="celula-dados" [id]="i*numItemLinha+k" contenteditable="true" (blur)="onBlur($event,i,key,i*numItemLinha+k)"
-                (keydown)="onKeyDown($event,i*numItemLinha+k)" #editavelDiv>
+                (keydown)="onKeyDown($event,i*numItemLinha+k)" [style.backgroundColor]="obj['_change']===key? 'lightcoral':' rgb(179, 211, 216)'" #editavelDiv>
                 {{obj[key]}}
                 <!-- <span>{{obj[key].length}}</span> -->
             </div>

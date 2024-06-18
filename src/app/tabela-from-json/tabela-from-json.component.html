@@ -1,0 +1,66 @@
+@if(listKeysHidden.length>0){
+<div>
+   <div> Lista de colunas ocultas ({{listKeysHidden.length}}):</div>
+@for(key of listKeysHidden; track $index; let i=$index){
+    {{key.name}}<button (click)="exibirColuna(key.name)">Exibir</button> 
+}
+</div>
+}
+<div class="grid-container" [style]="{'grid-template-columns': getGridTemplateColumns()}">
+   
+   
+    @for(key of listKeys; track $index; let i=$index){
+
+    <div class="celula-header" [id]="i"  [contentEditable]="false">
+
+        @if(key.name === 'id'){
+
+        <div>
+            {{key.name}}
+
+            <app-ordenar [key]="key.name" (ordemCrescente)="aClickUP(key.name)"
+                 (ordemDecrescente)="aClickDOWN(key.name)" (moveLeft)="moveLeft(key.name)" (moveRight)="moveRight(key.name)">
+            </app-ordenar>
+        </div>
+        }
+
+        @else {
+
+        <div >
+            {{key.name}}
+
+        <app-filtro-lista [key]="key.name" (filtrar)="filtrar(key.name,$event,listaObjetosOriginal)"></app-filtro-lista>
+
+        <app-ordenar [key]="key.name" (edite)="setValuesObjKeys(key.name,'editable',!key.editable)" (ordemCrescente)="aClickUP(key.name)"
+         (close)="hideColuna(key.name)" (ordemDecrescente)="aClickDOWN(key.name)"></app-ordenar>
+        </div>
+        }
+    </div>
+    }
+
+    <!-- incluir ordenador cresc/descr/deletar/incluir/editar celulas (use viewchild) -->
+    @for(obj of listaObjetos();track $index; let i = $index; ){
+
+    @for (key of listKeys; track key; let k=$index;let numItemLinha=$count) {
+        
+
+    <!-- fazer visibilidade das colunas -->
+    <div class="celula-dados" [id]="i*numItemLinha+k" (change)="setChangeCel(key.name)" (click)="setEditableColuna(i*numItemLinha+k, key.editable)" 
+        (blur)="onBlur($event,i,key.name,i*numItemLinha+k)" (keydown)="onKeyDown($event,i*numItemLinha+k)"
+        [style.backgroundColor]=" key.change ? 'lightcoral':' rgb(179, 211, 216)'" #editavelDiv>
+        {{obj[key.name]}}
+         <!-- <span>{{key.editable}}</span> -->
+    </div>
+    <!-- Mostrar o ID de cada celula -->
+
+
+
+
+    }
+
+    }
+    @empty {
+    <div>Tabela Vazia</div>
+    }
+
+</div>

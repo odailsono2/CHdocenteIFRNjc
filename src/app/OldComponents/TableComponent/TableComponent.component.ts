@@ -1,9 +1,9 @@
-import { Component, ElementRef, Input, QueryList, Renderer2, ViewChild, ViewChildren, contentChild, viewChild, viewChildren } from '@angular/core';
-import { todasDisciplinas } from '../intefaces/InterfaceDisciplina';
-import { TableThins } from '../services/functions.service';
-import { Item, filtrarMultiplasColunasTabela } from '../services/ordenarobjetos';
-import { OrdenarComponent } from '../OrdenarComponent/ordenar.component';
-import { FiltroListaComponent } from '../filtro-lista/filtro-lista.component';
+import { Component, ElementRef, Input, Renderer2, viewChildren } from '@angular/core';
+import { todasDisciplinas } from '../../intefaces/InterfaceDisciplina';
+import { TableThins } from '../../services/functions.service';
+import { Item } from '../../services/tableFunctions';
+import { OrdenarComponent } from '../../OrdenarComponent/ordenar.component';
+import { FiltroListaComponent } from '../../filtro-lista/filtro-lista.component';
 @Component({
   selector: 'app-table',
   standalone: true,
@@ -30,18 +30,18 @@ export class TableComponent {
 
   listKeysOriginal:string[]=[]
 
-  constructor(public tableThings: TableThins, private renderer:Renderer2){
+  constructor(public tableThings: TableThins){
     this.listaKeysPesquisa = new Map<string,string>()
     this.listaObjetos = this.tableThings.incluirKeyAtArray({
       arrayObj : this.listaObjetosOriginal,
       newkey: 'id',
-      indice:0,
+      coluna:0,
       // value:''
     })
     this.listaObjetos = this.tableThings.incluirKeyAtArray({
       arrayObj : this.listaObjetos,
       newkey: '_change',
-      indice:3,
+      coluna:3,
       value:''
     })
     this.listaObjetosAnterior = this.listaObjetos.map((obj)=>({... obj}))
@@ -155,6 +155,12 @@ export class TableComponent {
     return `repeat(${this.listKeys.length}, 1fr)`;
   }
 
+  moveLeft(){
+    this.listKeys.length
+
+  }
+  moveRight(){}
+  
   aClickUP = (chave:string)=>this.tableThings.ordenarAD(this.listaObjetos,chave)
   aClickDOWN = (chave:string)=>this.tableThings.ordenarAD(this.listaObjetos,chave, false)
 
