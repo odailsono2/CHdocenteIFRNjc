@@ -1,0 +1,14 @@
+@if(objTabelaProjecao === undefined){
+<div>Undefing</div>
+}
+
+<div>Objeto : {{objTabelaProjecao()}}</div>
+@for(curso of objTabelaProjecao(); track $index){
+<div>{{curso}}</div>
+}
+
+<div>
+    <app-tableJson [(obJSON)]="objTabelaProjecao"></app-tableJson>
+</div>
+
+<!-- <button (click)="navigateWithObject()">Go to Child with Object</button> -->

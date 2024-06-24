@@ -1,5 +1,5 @@
 export interface Item {
-  [key: string]: any; // This allows the object to have properties of any type
+  [key: string]: any ; // This allows the object to have properties of any type
 }
 
 export interface ObjKey {
@@ -121,8 +121,8 @@ export function incluirKeyAtArray({ arrayObj, newkey, value = undefined, coluna 
   let nova_lista: any[] = []
 
   if (newkey === 'id') {
-
-    arrayObj.forEach((objeto: any, id: number) => {
+//  console.log(arrayObj.length)
+    arrayObj.forEach((objeto: Item, id: number) => {
       // console.log(nova_lista)
       const novo_objeto = incluirKeyAt({ newkey: newkey, objeto: objeto, coluna: coluna, value: id })//{id,...objeto}
       nova_lista.push(novo_objeto)
@@ -141,6 +141,25 @@ export function incluirKeyAtArray({ arrayObj, newkey, value = undefined, coluna 
 
   return nova_lista
 
+}
+
+export function atribuiValoresNakey(obj:Item[],values:any[],key:string){
+
+  console.log(`obj: ${obj}`)
+  console.log(`values: ${values}`)
+
+  if(obj === undefined){
+    console.log(`obj: ${obj}`)
+    return []
+
+  }
+  
+  values.forEach((value,index)=>{
+    const newObj:Item = {...obj[index]}
+    obj.push(incluirKeyAt({objeto:newObj,newkey:key,value:value}))
+  })
+
+  return obj
 }
 
 //----Functions for objects

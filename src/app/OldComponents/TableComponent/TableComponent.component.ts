@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, Renderer2, viewChildren } from '@angular/core';
 import { todasDisciplinas } from '../../intefaces/InterfaceDisciplina';
-import { TableThins } from '../../services/functions.service';
+import { Utils } from '../../services/functions.service';
 import { Item } from '../../services/tableFunctions';
 import { OrdenarComponent } from '../../OrdenarComponent/ordenar.component';
 import { FiltroListaComponent } from '../../filtro-lista/filtro-lista.component';
@@ -20,7 +20,7 @@ export class TableComponent {
 
   listaKeysPesquisa:Map<string,string>
 
-  listaObjetos = this.listaObjetosOriginal
+  listaObjetos
 
   listaObjetosAnterior:Item[]
 
@@ -30,7 +30,8 @@ export class TableComponent {
 
   listKeysOriginal:string[]=[]
 
-  constructor(public tableThings: TableThins){
+  constructor(public tableThings: Utils){
+    this.listaObjetos=this.listaObjetosOriginal
     this.listaKeysPesquisa = new Map<string,string>()
     this.listaObjetos = this.tableThings.incluirKeyAtArray({
       arrayObj : this.listaObjetosOriginal,
@@ -38,13 +39,13 @@ export class TableComponent {
       coluna:0,
       // value:''
     })
-    this.listaObjetos = this.tableThings.incluirKeyAtArray({
-      arrayObj : this.listaObjetos,
-      newkey: '_change',
-      coluna:3,
-      value:''
-    })
-    this.listaObjetosAnterior = this.listaObjetos.map((obj)=>({... obj}))
+    // this.listaObjetos = this.tableThings.incluirKeyAtArray({
+    //   arrayObj : this.listaObjetos,
+    //   newkey: '_change',
+    //   coluna:3,
+    //   value:''
+    // })
+    this.listaObjetosAnterior = this.listaObjetos.map((obj: any)=>({... obj}))
     this.listaObjetosOriginal = this.listaObjetos
     this.listKeysOriginal = this.tableThings.getKeys(this.listaObjetos[0])
     this.listKeys = this.listKeysOriginal.filter((key:string)=>(!key.includes('_')))

@@ -1,0 +1,13 @@
+<form>
+    <input type="file" (change)="onFileChange($event)">
+  </form>
+  @if (fileContent) {
+  <div>
+    <h3>File Details:</h3>
+    <p>Name: {{ fileName }}</p>
+    <p>Size: {{ fileSize }} bytes</p>
+    <p>Type: {{ fileType }}</p>
+    <h3>File Content:</h3>
+    <pre>{{ fileContent }}</pre>
+  </div>
+}

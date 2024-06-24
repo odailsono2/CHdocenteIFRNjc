@@ -1,1 +1,12 @@
-digite algo no lugar de {{inputText}}: <input (blur)="change($event)">{{inputText}}
+<!-- digite algo no lugar de {{inputText()}}: <input (input)="change($event)">{{inputText()}} -->
+@if(receivedObject!=undefined){
+<div >
+    <p>ID: {{ receivedObject.id }}</p>
+    <p>Name: {{ receivedObject.name }}</p>
+    <p>Description: {{ receivedObject.description }}</p>
+  </div>
+}
+@else {
+    <p>undefined</p>
+}
+  

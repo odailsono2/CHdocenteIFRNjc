@@ -9,11 +9,11 @@
 <div class="grid-container" [style]="{'grid-template-columns': getGridTemplateColumns()}">
    
    
-    @for(key of listKeys; track $index; let i=$index){
+    @for(key of listKeys; track key; let i=$index){
 
-    <div class="celula-header" [id]="i"  [contentEditable]="false">
+    <div class="celula-header" [id]="key"  [contentEditable]="false">
 
-        @if(key.name === 'id'){
+        <!-- @if(key.name === 'id'){
 
         <div>
             {{key.name}}
@@ -24,29 +24,29 @@
         </div>
         }
 
-        @else {
+        @else { -->
 
         <div >
             {{key.name}}
 
-        <app-filtro-lista [key]="key.name" (filtrar)="filtrar(key.name,$event,listaObjetosOriginal)"></app-filtro-lista>
+        <app-filtro-lista [key]="key.name" (filtrar)="filtrar(key.name,$event)"></app-filtro-lista>
 
         <app-ordenar [key]="key.name" (edite)="setValuesObjKeys(key.name,'editable',!key.editable)" (ordemCrescente)="aClickUP(key.name)"
          (close)="hideColuna(key.name)" (ordemDecrescente)="aClickDOWN(key.name)"></app-ordenar>
         </div>
-        }
+        <!-- } -->
     </div>
     }
 
     <!-- incluir ordenador cresc/descr/deletar/incluir/editar celulas (use viewchild) -->
-    @for(obj of listaObjetos();track $index; let i = $index; ){
+    @for(obj of listaObjetos();track obj['id']; let i = $index; ){
 
     @for (key of listKeys; track key; let k=$index;let numItemLinha=$count) {
         
 
     <!-- fazer visibilidade das colunas -->
-    <div class="celula-dados" [id]="i*numItemLinha+k" (change)="setChangeCel(key.name)" (click)="setEditableColuna(i*numItemLinha+k, key.editable)" 
-        (blur)="onBlur($event,i,key.name,i*numItemLinha+k)" (keydown)="onKeyDown($event,i*numItemLinha+k)"
+    <div class="celula-dados" [id]="obj['id']+key.name" (click)="setEditableColuna(obj['id']+key.name, key.editable)" 
+        (blur)="onBlur($event,i,key.name,obj['id']+key.name)" (keydown)="onKeyDown($event,obj['id']+key.name)"
         [style.backgroundColor]=" key.change ? 'lightcoral':' rgb(179, 211, 216)'" #editavelDiv>
         {{obj[key.name]}}
          <!-- <span>{{key.editable}}</span> -->

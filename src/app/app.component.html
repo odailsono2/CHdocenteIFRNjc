@@ -1,80 +1,23 @@
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid Layout</title>
-    <style>
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto;
-            gap: 10px;
-            border: 1px solid black;
-            padding: 10px;
-        }
-        .grid-item {
-            border: 1px solid black;
-            padding: 10px;
-        }
-        .subgrid {
-            display: grid;
-            grid-template-columns: auto auto;
-            gap: 10px;
-            padding: 10px;
-        }
-    </style>
-</head>
-<body>
-
-<h2>Grid Layout with Nested Grids</h2>
-
 <div class="grid-container">
-    <div class="grid-item">Name</div>
-    <div class="grid-item">John Doe</div>
-    <div class="grid-item">Age</div>
-    <div class="grid-item">30</div>
-    <div class="grid-item">Address</div>
-    <div class="grid-item">
-        <div class="subgrid">
-            <div class="grid-item">Street</div>
-            <div class="grid-item">123 Main St</div>
-            <div class="grid-item">City</div>
-            <div class="grid-item">New York</div>
-            <div class="grid-item">Coordinates</div>
-            <div class="grid-item">
-                <div class="subgrid">
-                    <div class="grid-item">Latitude</div>
-                    <div class="grid-item">40.7128</div>
-                    <div class="grid-item">Longitude</div>
-                    <div class="grid-item">-74.0060</div>
-                </div>
-            </div>
-        </div>
+    <div class="grid-item" >
+        
+          <h1>Menu</h1>
+          <!-- <app-table></app-table> -->
+          <!-- <app-json-table [jsonData]="data"></app-json-table> -->
+          <!-- The routed views render in Ithe <router-outlet>-->
+          <ul>
+            <li><a routerLink="/CarregaArquivo">Carregar Arquivos</a></li>
+            <li><a routerLink="/listaDisciplinas" [state]="dadosGradeCursos">Lista de Disciplinas</a></li>
+            <li><a routerLink="/Turmas">Cadastro Turmas</a></li>
+            <!-- <li><a routerLink="/Teste2">Cadastro de turmas </a></li> -->
+            <!-- <li><a href="/ProjCH" >tabela </a></li> -->
+          </ul>
+          <!-- <p>{{turmas}}</p> -->
+        
     </div>
-    <div class="grid-item">Projects</div>
-    <div class="grid-item">
-        <div class="subgrid">
-            <div class="grid-item">Project Name</div>
-            <div class="grid-item">Status</div>
-            <div class="grid-item">Project X</div>
-            <div class="grid-item">Completed</div>
-            <div class="grid-item">Details</div>
-            <div class="grid-item">
-                <div class="subgrid">
-                    <div class="grid-item">Start Date</div>
-                    <div class="grid-item">2022-01-01</div>
-                    <div class="grid-item">End Date</div>
-                    <div class="grid-item">2022-06-01</div>
-                </div>
-            </div>
-            <div class="grid-item">Project Y</div>
-            <div class="grid-item">In Progress</div>
-        </div>
+    <div class="grid-item" style="z-index: 1 ; top: 0;left: 30vh;">
+        <router-outlet></router-outlet>
     </div>
+
 </div>
-
-</body>
-</html>
-
-<router-outlet />
 

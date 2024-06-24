@@ -1,9 +1,14 @@
 import { Routes } from '@angular/router';
-import { TableJSONComponent } from './tabela-from-json/tabela-from-json.component';
-import { TestComponent } from './test/test.component';
+import { Test2Component } from './test2/test2.component';
+import { TurmasComponent } from './turmas/turmas.component';
+import { CarregaArquivoComponent } from './carrega-arquivo/carrega-arquivo.component';
+import { ListarDisciplinasComponent } from './listar-disciplinas/listar-disciplinas.component';
 
 export const routes: Routes = [
-    // {path:'',redirectTo:'/test',pathMatch:'full'},
-    {path:'listaDisciplinas',component:TableJSONComponent},
-    {path:'ProjCH',component:TestComponent}
+    {path:'',redirectTo:'/listaDisciplinas',pathMatch:'full'},
+    {path:'listaDisciplinas',component:ListarDisciplinasComponent},
+    {path:'Teste2',component:Test2Component},
+    {path:'CarregaArquivo',component:CarregaArquivoComponent},
+    {path:'Turmas',component:TurmasComponent}
+
 ];

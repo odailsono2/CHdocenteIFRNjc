@@ -1,9 +1,11 @@
-import { Component, ElementRef, Input, Signal, computed, signal, viewChildren } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Signal, computed, inject, input, model, output, signal, viewChildren } from '@angular/core';
 import { todasDisciplinas } from '../intefaces/InterfaceDisciplina';
-import { TableThins } from '../services/functions.service';
+import { Utils } from '../services/functions.service';
 import { Item, ObjKey } from '../services/tableFunctions';
 import { OrdenarComponent } from '../OrdenarComponent/ordenar.component';
 import { FiltroListaComponent } from '../filtro-lista/filtro-lista.component';
+import { DataServices } from '../services/DataServices.service';
+import { Route } from '@angular/router';
 @Component({
   selector: 'app-tableJson',
   standalone: true,
@@ -11,51 +13,83 @@ import { FiltroListaComponent } from '../filtro-lista/filtro-lista.component';
   templateUrl: './tabela-from-json.component.html',
   styleUrl: './tabela-from-json.component.css'
 })
-export class TableJSONComponent {
+export class TableJSONComponent implements OnInit {
 
 
-  @Input() listaObjetosOriginal: Item[] = [...todasDisciplinas]
+  // @Input() obJSON : Item[] = todasDisciplinas
+
+  // obJSONChange = model<Item[]>()
+
+  // data = inject(DataServices)
+
+  obJSON = model<Item[]>(todasDisciplinas)
+
+  listaObjetosOriginal: Item[] = []//= this.obJSON
 
   divcontent = viewChildren<ElementRef>('editavelDiv')
 
-  listaKeysPesquisa: Map<string, string>
+  listaKeysPesquisa: Map<string, string> = {} as Map<string, string>
 
-  listaObjetos = signal(this.listaObjetosOriginal)
+  listaObjetos = signal<Item[]>([])
 
-  listaObjetosAnterior: Item[]
-
-  auxContent: string = ""
+  listaObjetosAnterior: Item[] = []
 
   listKeys: ObjKey[] = []
 
-  listKeysOriginal: Signal<string[]>
+  listKeysOriginal = signal<string[]>([])
+
   listKeysObjInicial: ObjKey[] = [];
 
   listKeysHidden: ObjKey[] = []
 
-  constructor(public tableThings: TableThins) {
+  constructor(public tableThings: Utils) {
+
+    // if (this.data.getdataStoreJSON() !== undefined){
+    //   console.log("constructor: defined", this.data)
+    //   // this.listaObjetosOriginal = JSON.parse(this.data.getfilesLoaded())
+    //   this.listaObjetosOriginal = this.data.getdataStoreJSON()
+    // }else{
+    //   console.log("constructor: undefined", this.data.getdataStoreJSON())
+    // }
+
+    // this.listaObjetosOriginal.forEach((item)=>console.log("constructor: listaOriginal",item))
+    // this.listaObjetosOriginal = this.obJSON()
+
+  }
+
+  ngOnInit(): void {
+    
+
+    console.log("ngOnINIT: ", this.obJSON())
+    // console.log("type of", typeof this.listaObjetosOriginal)
+
+    // if (this.obJSON() === undefined) {
+    //   // this.listaObjetosOriginal = JSON.parse(this.data.getfilesLoaded())
+    //   console.log(": defined", this.data)
+    //   this.listaObjetosOriginal = this.data.getdataStoreJSON() === undefined ? [] : this.data.getdataStoreJSON()
+    // }
+    // else{
+      this.listaObjetosOriginal = this.obJSON()
+    // }
+
 
     this.listaKeysPesquisa = new Map<string, string>()
 
-    //----acrescenta chaves de controle
+    // this.listaObjetosOriginal().forEach((item)=>this.listaObjetos().push(item))
 
-    // coluna ID acrescentada
 
-    this.listaObjetos.set(this.tableThings.incluirKeyAtArray({
-      arrayObj: this.listaObjetos(),
+    const auxlistaObj: Item[] = this.tableThings.incluirKeyAtArray({
+      arrayObj: this.listaObjetosOriginal,
       newkey: 'id',
       coluna: 0,
       // value:''
-    }))
+    })
 
-    // coluna professor acrescentada
+    this.listaObjetos.set(auxlistaObj)
+    // auxlistaObj.forEach((item)=>{
+    //   this.listaObjetos().push(item)
+    // })
 
-    this.listaObjetos.set(this.tableThings.incluirKeyAtArray({
-      arrayObj: this.listaObjetos(),
-      newkey: 'professor',
-      coluna: this.listaObjetos().length,
-      value: ''
-    }))
 
     // estado dos objetos anterior inicializado
     this.listaObjetosAnterior = this.listaObjetos().map((obj) => ({ ...obj }))
@@ -63,7 +97,9 @@ export class TableJSONComponent {
     //lista de objetos no estado inicial
     this.listaObjetosOriginal = this.listaObjetos()
 
-    this.listKeysOriginal = computed(() => this.tableThings.getKeys(this.listaObjetos()[0]))
+    // this.listKeysOriginal = computed(() => this.tableThings.getKeys(this.listaObjetos()[0]))
+
+    this.tableThings.getKeys(this.listaObjetos()[0]).forEach((key) => this.listKeysOriginal().push(key))
 
     // this.listKeysOriginal().forEach((key)=>{
     //   this.listKeys.push({'name':key})
@@ -78,9 +114,15 @@ export class TableJSONComponent {
 
     //coloca as chaves diposniveis em um Set que será usado nos filtros
     this.listKeys.forEach((key) => this.listaKeysPesquisa.set(key.name, ''))
-    // console.log(this.listaObjetos[0]['componente'].length)
-    // console.log(this.listaObjetosAnterior[0]['componente'].length)
-    // console.log(this.listaObjetos()[0]['componente']===this.listaObjetosAnterior[0]['componente'])
+
+    this.obJSONChange(this.listaObjetos())
+
+    // this.data.setdataStore(this.listaObjetos())
+  }
+
+  obJSONChange(value: Item[]) {
+    console.log("obJSONChange(value): ",value)
+    this.obJSON.set(value)
 
   }
 
@@ -94,9 +136,9 @@ export class TableJSONComponent {
     }
   }
 
-  setChangeCel(obgkeyname:string){
-    this.setValuesObjKeys(obgkeyname,'change',true)
-  }
+  // setChangeCel(obgkeyname:string){
+  //   this.setValuesObjKeys(obgkeyname,'change',true)
+  // }
 
 
   inicializaListaKeys() {
@@ -134,17 +176,17 @@ export class TableJSONComponent {
 
   }
 
-  setEditableColuna(divID: number, keyeditable: boolean | undefined) {
-    const a = this.divcontent()[divID].nativeElement
+  setEditableColuna(divID: string, keyeditable: boolean | undefined) {
+    const a = this.divcontent().filter((div) => div.nativeElement.id === divID)[0].nativeElement
+    // console.log(a)
     a.contentEditable = keyeditable ? true : false
     a.focus()
-    // console.log(a)
   }
 
   //filtra simultaneamento em várias colunas de uma tabela
-  filtrar = (key: string, evento: any, listaOriginal: Item[]) => {
+  filtrar = (key: string, evento: any) => {
 
-    let resultado: Item[] = listaOriginal
+    let resultado: Item[] = this.listaObjetosOriginal
 
     const palavra: string = evento.target.value.toLowerCase()
 
@@ -165,7 +207,7 @@ export class TableJSONComponent {
     this.listaObjetos.set(resultado)
   }
 
-  onInput = (event: KeyboardEvent, idDIV: number) => {
+  onInput = (event: KeyboardEvent, divID: string) => {
 
 
     const key = (event as KeyboardEvent).key
@@ -177,7 +219,9 @@ export class TableJSONComponent {
     if (teclas.includes(key)) {
       event.preventDefault()
 
-      const a = this.divcontent()[idDIV].nativeElement
+      // const a = this.divcontent()[divID].nativeElement
+
+      const a = this.divcontent().filter((div) => div.nativeElement.id === divID)[0].nativeElement
 
       a.blur()
       // this.divcontent().forEach((div)=>console.log(div.nativeElement))
@@ -193,20 +237,23 @@ export class TableJSONComponent {
     }
   }
 
-  onBlur = (event: any, id: number, key: string, divID: number) => {
+  onBlur = (event: any, id: number, key: string, divID: string) => {
 
 
 
     const auxContent: any = event.target.innerText;
 
-    // console.log('listaObj',this.listaObjetos[id][key].length)
+    // console.log('ID, KEY',id,key)
+    // console.log('ListaObjeto',this.listaObjetosOriginal)
     // console.log('listaObjante',this.listaObjetosAnterior[id][key].length)
 
-    // console.log(this.tableThings.normalizeString(this.listaObjetos[id][key])===this.tableThings.normalizeString(auxContent))
+    // console.log(this.tableThings.normalizeString(this.listaObjetos()[id][key])===this.tableThings.normalizeString(auxContent))
 
-    if (this.tableThings.normalizeString(this.listaObjetos()[id][key]) !== this.tableThings.normalizeString(auxContent)) {
+    if (this.tableThings.normalizeString(this.listaObjetosOriginal[id][key]) !== this.tableThings.normalizeString(auxContent)) {
 
-      const a = this.divcontent()[divID].nativeElement
+      //const a = this.divcontent()[divID].nativeElement
+      const a = this.divcontent().filter((div) => div.nativeElement.id === divID)[0].nativeElement
+
       a.style.backgroundColor = 'lightcoral';
 
       if (typeof this.listaObjetos()[id][key] === 'number') {
@@ -217,15 +264,19 @@ export class TableJSONComponent {
         this.listaObjetosAnterior[id][key] = auxContent
       }
 
-      this.listaObjetos()[id] = this.setObjChange(this.listaObjetos()[id], key)
-      this.listaObjetosAnterior[id] = this.setObjChange(this.listaObjetosAnterior[id], key)
+      // this.listaObjetos()[id] = this.setObjChange(this.listaObjetos()[id], key)
+      // this.listaObjetosAnterior[id] = this.setObjChange(this.listaObjetosAnterior[id], key)
+
+      this.obJSONChange(this.listaObjetos())
+
+      // this.data.setdataStore(this.listaObjetos())
     }
 
   }
 
   onKeyDown = this.onInput
 
-  setObjChange = (obj: Item, key: string) => this.updateObj(obj, '_change', key)
+  // setObjChange = (obj: Item, key: string) => this.updateObj(obj, '_change', key)
 
   updateObj(obj: Item, key: string, value: any): Item {
     obj[key] = value
