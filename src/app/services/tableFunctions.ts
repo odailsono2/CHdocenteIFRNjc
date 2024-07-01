@@ -1,5 +1,5 @@
 export interface Item {
-  [key: string]: any ; // This allows the object to have properties of any type
+  [key: string]: any; // This allows the object to have properties of any type
 }
 
 export interface ObjKey {
@@ -7,24 +7,24 @@ export interface ObjKey {
   visible?: string
   clickable?: boolean
   editable?: boolean
-  style?:string
-  freeze?:boolean
-  filter?:boolean
-  change?:boolean
-  set?:(parameter:string|boolean|number)=>void
+  style?: string
+  freeze?: boolean
+  filter?: boolean
+  change?: boolean
+  set?: (parameter: string | boolean | number) => void
 }
 
-export function setParameterObjKey<T, K extends keyof T>(obgkey:T, key:K, value: T[K]){
+export function setParameterObjKey<T, K extends keyof T>(obgkey: T, key: K, value: T[K]) {
   obgkey[key] = value
 }
 
 
 // implementar classe de keys com Set type
 export function includeObjKey({ name }: { name: string }): ObjKey {
-  
+
   let newKey: ObjKey = {} as ObjKey;
 
-  newKey.name= name
+  newKey.name = name
   newKey.visible = "visible"
   newKey.editable = true
 
@@ -32,7 +32,7 @@ export function includeObjKey({ name }: { name: string }): ObjKey {
 }
 
 export function setListObjKeys({ listaKeysNames }: { listaKeysNames: string[] }): ObjKey[] {
-  
+
   const listaKeys: ObjKey[] = []
 
   listaKeysNames.forEach((name) => {
@@ -69,7 +69,12 @@ interface BuscaObejeto {
 }
 
 export function buscaObjeto({ items, key, findItem }: BuscaObejeto): Item[] {
-  const resultado: Item[] = items.filter((item) => (item[key].toLowerCase().includes(findItem)))
+
+  const resultado: Item[] = items.filter((item) => {
+    // console.log('buscaObjeto',String(items[0][key]),key,findItem)
+    const itemaux = String(item[key] )
+    return itemaux.toLowerCase().includes(findItem!)
+  })
   return resultado
 }
 
@@ -121,7 +126,7 @@ export function incluirKeyAtArray({ arrayObj, newkey, value = undefined, coluna 
   let nova_lista: any[] = []
 
   if (newkey === 'id') {
-//  console.log(arrayObj.length)
+    //  console.log(arrayObj.length)
     arrayObj.forEach((objeto: Item, id: number) => {
       // console.log(nova_lista)
       const novo_objeto = incluirKeyAt({ newkey: newkey, objeto: objeto, coluna: coluna, value: id })//{id,...objeto}
@@ -143,20 +148,20 @@ export function incluirKeyAtArray({ arrayObj, newkey, value = undefined, coluna 
 
 }
 
-export function atribuiValoresNakey(obj:Item[],values:any[],key:string){
+export function atribuiValoresNakey(obj: Item[], values: any[], key: string) {
 
   console.log(`obj: ${obj}`)
   console.log(`values: ${values}`)
 
-  if(obj === undefined){
+  if (obj === undefined) {
     console.log(`obj: ${obj}`)
     return []
 
   }
-  
-  values.forEach((value,index)=>{
-    const newObj:Item = {...obj[index]}
-    obj.push(incluirKeyAt({objeto:newObj,newkey:key,value:value}))
+
+  values.forEach((value, index) => {
+    const newObj: Item = { ...obj[index] }
+    obj.push(incluirKeyAt({ objeto: newObj, newkey: key, value: value }))
   })
 
   return obj

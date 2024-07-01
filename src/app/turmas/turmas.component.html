@@ -1,14 +1,14 @@
-@if(objTabelaProjecao === undefined){
-<div>Undefing</div>
-}
-
-<div>Objeto : {{objTabelaProjecao()}}</div>
-@for(curso of objTabelaProjecao(); track $index){
+<!-- <div>Objeto : {{objTabelaProjecao()}}</div> -->
+<!-- @for(curso of objTabelaProjecao(); track $index){
+@for(key of keysCursos(); track $index){
 <div>{{curso}}</div>
 }
+} -->
+<div style="text-align: center; font-size: large;">Tabela de Turmas</div>
+<div>Preencha a quantidade de turmas existentes no período para cada curso</div>
+<app-tableJson [(obJSON)]="objTabelaProjecao"></app-tableJson>
+<div style="text-align: center; font-size: large;">Distribuição de Carga-Horária</div>
+<app-tableJson [obJSON]="projDocente()"></app-tableJson>
 
-<div>
-    <app-tableJson [(obJSON)]="objTabelaProjecao"></app-tableJson>
-</div>
 
 <!-- <button (click)="navigateWithObject()">Go to Child with Object</button> -->

@@ -583,5 +583,500 @@
         "chTeorica": "30",
         "area": "Energias Renováveis",
         "curso": "CST Energias Renovaveis"
-    }
+    },
+     {
+      "periodo": "1",
+      "componente": "7848 - Arte I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area": "Arte",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "8399 - Desenho CAD",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area": "Mecânica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7845 - Educação em Tecnologias Digitais",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7840 - Educação Física I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "8400 - Eletricidade Básica",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7843 - Filosofia I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7867 - Física : mecânica clássica e termodinâmica.",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7844 - Geografia I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7842 - Língua Portuguesa e Literatura I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7837 - Matemática I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7846 - Química: Geral e Inorgânica",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "1",
+      "componente": "7847 - Sociologia I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7859 - Arte II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7860 - Arte III",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "8402 - Circuitos Elétricos",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "180",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7854 - Educação Física II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7861 - Filosofia II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7881 - Física : eletromagnetismo, ondas, óptica  e física moderna",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7858 - Geografia II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7877 - Gestão e Empreendedorismo",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7853 - Inglês I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7852 - Língua Portuguesa e Literatura II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7856 - Matemática II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "8401 - Noções de Mecânica",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7857 - Química: Físico-química",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "2",
+      "componente": "7855 - Sociologia II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "7869 - Biologia -  Do Indivíduo ao Ambiente",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "8406 - Eletrônica Analógica",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "8405 - Eletrônica Digital",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "7874 - Filosofia III",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "7864 - História e Cultura",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "7871 - Inglês II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "8403 - Instalações Elétricas de Baixa Tensão",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "7873 - Língua Portuguesa e Literatura III",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "8404 - Máquinas e Acionamentos Elétricos",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "7866 - Matemática III",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "7882 - Química: Orgânica e Meio Ambiente",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "3",
+      "componente": "7876 - Sociologia III",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7878 - Biologia - Hereditariedade, Evolução e suas Tecnologias",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7892 - Biologia - Vida e Diversidade",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "8411 - Controles Lógicos Programáveis",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "8409 - Eficiência Energética e Qualidade de Energia",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "8408 - Eletrônica Industrial",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7885 - Espanhol I",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7890 - Espanhol II",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "8054 - Filosofia, Ciência e Tecnologia - Eixo Controle e Processos Industriais",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7880 - História, Poder e Trabalho",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7886 - Inglês III",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "8407 - Instalações Elétricas de Alta Tensão",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "120",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7883 - Língua Portuguesa e Literatura IV",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "8413 - Manutenção Elétrica",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "8410 - Medidas Elétricas",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7918 - Segurança do Trabalho",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "7884 - Sociologia do Trabalho",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "30",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     },
+     {
+      "periodo": "4",
+      "componente": "8412 - Tópicos em Energias Renováveis",
+      "tipo": "Regular",
+      "optativo": "Não",
+      "chTeorica": "60",
+      "area":"Eletrotécnica",
+      "curso": "Eletrotécnica"
+     }
 ]

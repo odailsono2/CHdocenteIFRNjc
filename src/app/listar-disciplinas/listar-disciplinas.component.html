@@ -1,11 +1,15 @@
 <div>Lista de Disciplinas</div>
-<div>Instruções: Preencha os professores responsáveis por cada disciplina e clique em salvar. Você também poderá editar as células.</div>
+<div>Instruções: Preencha os professores responsáveis por cada disciplina e clique em salvar. Você também poderá editar
+    as células.</div>
 <button (click)="salvar()">Salvar alterações</button>
-@for (obj of pegarDados(); track $index){
+
+<button (click)="preencher()">Preencher com professores automaticamente</button>
+
+<!-- @for (obj of pegarDados(); track $index){
 <div>
     @for(key of keys; track key){
-    <span>{{obj[key]}} ||||   </span>
+    <span>{{obj[key]}} |||| </span>
     }
 </div>
-}
+} -->
 <app-tableJson [(obJSON)]="listaDisciplinas"></app-tableJson>

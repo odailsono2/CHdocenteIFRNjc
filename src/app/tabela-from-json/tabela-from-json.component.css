@@ -16,6 +16,8 @@
 .celula-header{
     display: ruby; 
     justify-content: center;
+    text-align: center;
+    width: auto;
     align-items: center;
     border: 1px solid rgba(0, 0, 0, 0.8);;
     border-color: black;
@@ -27,26 +29,27 @@
     /* display: inline; */
 }
 
-.celula-dados{
+.celuladados{
     display: grid;
     border: 1px solid;
+    width: auto;
     border-color: black;
     color:rgb(10, 44, 73);
     transition: border-color 0.3s;
     align-items: center;
-    /* background-color: rgb(145, 200, 209); */
+    background-color: rgb(145, 200, 209);
 
     /* white-space: pre; */
     /* display: inline; */
 }
-.celula-dados:hover{
-    background-color:rgb(100, 141, 85);
+.celuladados:hover{
+    background-color:rgb(64, 96, 156);
 }
 
-.celula-dados:focus{
+.celuladados:focus{
     background-color: #ffffff;
 }
 
-/* .celula-dados:not(:focus):hover{
+/* .celuladados:not(:focus):hover{
     background-color:rgb(105, 235, 147);
 } */
